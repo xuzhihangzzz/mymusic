@@ -1,6 +1,7 @@
 # mymusic
 
 vue全家桶+ElementUI+Flex布局写的PC网页端仿网易云音乐SPA项目
+
 本项目未做移动端适配，请使用PC端浏览器访问
 
 ### 线上地址
