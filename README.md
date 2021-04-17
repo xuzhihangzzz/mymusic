@@ -2,7 +2,8 @@
 
 vue全家桶+ElementUI+Flex布局写的PC网页端仿网易云音乐SPA项目
 
-
+## 线上地址
+[47.98.130.23:8080/mymusic/](http://47.98.130.23:8080/mymusic/#/home)
 
 ## 后端接口来自 [NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
