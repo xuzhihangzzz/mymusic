@@ -97,7 +97,7 @@
         <ul>
           <li v-for="item of relatedList" :key="item.vid" @click="intoMvDetail(item.id)">
             <div class="avatar">
-              <img :src="item.cover + '?param=320y180'" :alt="item.name" :title="item.name" />
+              <img v-lazy="item.cover + '?param=320y180'" :alt="item.name" :title="item.name" />
             </div>
             <div class="info">
               <h2 class="flex-row ellipsis">

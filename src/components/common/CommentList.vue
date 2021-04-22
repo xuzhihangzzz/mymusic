@@ -5,7 +5,7 @@
       <li class="item" v-for="item in commentList" :key="item.commentId">
         <!-- 头像 -->
         <div class="avatar">
-          <img :src="item.user.avatarUrl" :alt="item.user.nickname" :title="item.user.nickname">
+          <img v-lazy="item.user.avatarUrl" :alt="item.user.nickname" :title="item.user.nickname">
         </div>
         <!-- 信息，操作 -->
         <div class="info">

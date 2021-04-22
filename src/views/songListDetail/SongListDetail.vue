@@ -3,7 +3,7 @@
     <div class="left shadow">
       <div class="top">
         <div class="avatar">
-          <img :src="detail.coverImgUrl + '?param=200y200'" alt="" />
+          <img v-lazy="detail.coverImgUrl + '?param=200y200'" alt="" />
         </div>
         <div class="info">
           <div class="title flex-between">
@@ -12,7 +12,7 @@
           </div>
           <div class="user flex-row">
             <div class="avatar" @click="toUser(creator.userId)">
-              <img :src="creator.avatarUrl + '?param=100y100'" alt="" />
+              <img v-lazy="creator.avatarUrl + '?param=100y100'" alt="" />
             </div>
             <p class="nickname" @click="toUser(creator.userId)">{{ creator.nickname }}</p>
             <p class="createTime" v-if="detail.createTime"> 
@@ -56,7 +56,7 @@
           <li v-for="item of subscribers" :key="item.userId">
             <div style="cursor:pointer;" class="avatar" @click="toUser(item.userId)">
               <img
-                :src="item.avatarUrl + '?param=150y150'"
+                v-lazy="item.avatarUrl + '?param=150y150'"
                 :alt="item.nickname"
                 :title="item.nickname"
               />
@@ -78,7 +78,7 @@
           >
             <div class="avatar">
               <img
-                :src="item.coverImgUrl + '?param=150y150'"
+                v-lazy="item.coverImgUrl + '?param=150y150'"
                 :alt="item.nickname"
                 :title="item.nickname"
               />
@@ -101,7 +101,7 @@
           <li class="item" v-for="item of comments" :key="item.time">
             <div class="avatar" @click="toUser(item.user.userId)">
               <img
-                :src="item.user.avatarUrl + '?param=150y150'"
+                v-lazy="item.user.avatarUrl + '?param=150y150'"
                 :alt="item.user.nickname"
                 :title="item.user.nickname"
               />

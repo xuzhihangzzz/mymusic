@@ -2,7 +2,7 @@
   <div class="info-container">
     <div class="card">
       <div class="avatar">
-        <img :src="userProfile.avatarUrl" />
+        <img v-lazy="userProfile.avatarUrl" />
       </div>
     </div>
 

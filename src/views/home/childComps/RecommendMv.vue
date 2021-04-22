@@ -7,7 +7,7 @@
 
         <!-- 图片加播放量的div -->
         <div class="imgText">
-          <img :src="item.picUrl" alt="">
+          <img v-lazy="item.picUrl" alt="">
           <div class="count">
             <!-- 播放图标 -->
             <i class="icon"></i>

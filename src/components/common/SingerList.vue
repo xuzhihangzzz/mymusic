@@ -6,7 +6,7 @@
 
           <div class="img-parent">
             <div class="img-class">
-              <img :src="getUrl(item.img1v1Url)" alt="">
+              <img v-lazy="getUrl(item.img1v1Url)" alt="">
             </div>
           </div>
         

@@ -10,7 +10,7 @@
             <i class="el-icon-video-play" @click="playSong(item, index)"></i>
           </div>
           <div class="img">
-            <img :src="item.image" alt="">
+            <img v-lazy="item.image" alt="">
           </div>
           <!-- 歌名、歌手名 -->
           <div class="info ellipsis">
