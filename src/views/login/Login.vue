@@ -28,5 +28,17 @@
     text-align: center;
     padding: 1em 0 0.4em 0;
   }
-  
+  .login {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* 项目在主轴上的对齐方式 */
+    justify-content: center;
+    /* 项目在交叉轴上的对齐方式 */
+    align-items: center;
+    background-image: url("../../assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 </style>
