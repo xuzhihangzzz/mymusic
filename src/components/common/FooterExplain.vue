@@ -24,8 +24,9 @@
           <h4 class="title">联系我</h4>
           <div class="connection">
             <p>Email: <a href="mailto:3243419394@qq.com" target="_top">3243419394@qq.com</a></p>
-            <p href="#">QQ: 3243419394</p>
-            <p href="#">微信: 左侧二维码</p>
+            <p>QQ: 3243419394</p>
+            <p>微信: 左侧二维码</p>
+            <p>GitHub: <a href="https://github.com/xuzhihangzzz" target="_blank">xuzhihangzzz</a></p>
           </div>
         </div>
 

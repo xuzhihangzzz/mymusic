@@ -132,7 +132,6 @@
     position: relative;
     width: 350px;
     max-width: 350px;
-    margin: 4em auto;
     background: #fff;
     background-image: url(~assets/img/loginbg.jpg);
     border-radius: 8px;
