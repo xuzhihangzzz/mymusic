@@ -2,7 +2,7 @@
  * @Author: xuzhihang
  * @Date:   2020-12-13 17:05:46
  * @Last Modified by:   xuzhihang
- * @Last Modified time: 2021-03-15 19:56:33
+ * @Last Modified time: 2021-04-22 14:31:46
  */
 
 import Vue from 'vue'
@@ -19,6 +19,7 @@ const Rank = () => import('views/rank/Rank')
 const SongListDetail = () => import('views/songListDetail/SongListDetail')
 const MvDetail = () => import('views/mvDetail/MvDetail')
 const Search = () => import('views/search/Search')
+const NotFound = () => import('views/notfound/NotFound')
 
 Vue.use(VueRouter)
 
@@ -97,6 +98,13 @@ const routes = [
       keepAlive: true
     }
   },
+  {
+    path: '*',
+    component: NotFound,
+    meta: {
+      keepAlive: true
+    }
+  }
 ]
 
 const router = new VueRouter({
