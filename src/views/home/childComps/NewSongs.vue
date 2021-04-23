@@ -7,7 +7,7 @@
         <div class="complete-item">
           <!-- 播放icon -->
           <div class="front-icon">
-            <i class="el-icon-video-play" @click="playSong(item, index)"></i>
+            <i class="el-icon-video-play hand" @click="playSong(item, index)"></i>
           </div>
           <div class="img">
             <img v-lazy="item.image" alt="">
@@ -69,6 +69,9 @@
 </script>
 
 <style lang="less" scoped>
+  .hand {
+    cursor: pointer;
+  }
   .new-songs {
     margin-top: 2px;
   }

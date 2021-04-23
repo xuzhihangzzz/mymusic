@@ -453,13 +453,16 @@
     align-items: center;
   }
   .icon-prev {
+    cursor: pointer;
     font-size: 30px;
   }
   .icon-play {
+    cursor: pointer;
     font-size: 40px;
     margin: 0 10px;
   }
   .icon-next {
+    cursor: pointer;
     font-size: 30px;
   }
   .progress-wrap {
