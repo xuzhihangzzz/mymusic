@@ -70,103 +70,103 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .comment-list {
     margin-top: 20px;
-  }
-  .comment-list h3 {
-    margin-bottom: 15px;
-    font-size: 16px;
-  }
-  .comment-list ul li {
-    padding: 10px 0;
-    width: 100%;
-    display: flex;
-  }
-  li .avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 12px;
-    flex-shrink: 0;
-  }
-  li .avatar img {
-    width: 100%;
-    border-radius: 50%;
-  }
-  li .info {
-    flex: 1;
-  }
-  li .info .info-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  li .info h2 {
-    font-size: 15px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-  }
-  li .info span {
-    color: #4a4a4a;
-  }
-  li .info h2 small {
-    margin-left: 14px;
-    font-size: 12px;
-    color: #a5a5c1;
-    font-weight: 200;
-  }
-  li .info h2 .tool {
-    display: flex;
-    align-items: center;
-  }
-  li .info h2 .tool i {
-    font-size: 24px;
-    font-weight: 100;
-    margin-left: 20px;
-    cursor: pointer;
-    transition: all 0.4s;
-  }
-  li .info h2 .tool i .active {
-    color: #fa2800;
-  } 
-  li .info h2 .tool span {
-    font-size: 12px;
-    margin-top: 2px;
-    color: #666;
-    font-weight: 200;
-    position: relative;
-  }
-  li .info h2 .tool span:after {
-    /* 一根竖着的分隔线 */
-    content: "";
-    width: 1px;
-    height: 13px;
-    background: #4a4a4a;
-    opacity: 0.7;
-    position: absolute;
-    top: 2px;
-    right: -12px;
-  }
-  .info .content {
-    width: 100%;
-    font-size: 12px;
-    color: #4a4a4a;
-    line-height: 1.6;
-    padding: 8px 10px;
-    background: #f5f5f5;
-    margin-top: 5px;
-    border-radius: 3px;
-  }
-  .info .content .beReqlied {
-    margin-top: 10px;
-    background: #ffffff;
-    padding: 8px 10px;
-    border-radius: 3px;
-    color: #666666;
-  }
-  .info .content .beReqlied small {
-    color: #fa2800;
+    h3 {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+    li {
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      .avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        margin-right: 12px;
+        flex-shrink: 0;
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+      .info {
+        flex: 1;
+        .info-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        h2 {
+          font-size: 15px;
+          margin-right: 5px;
+          margin-bottom: 10px;
+          small {
+            margin-left: 14px;
+            font-size: 12px;
+            color: #a5a5c1;
+            font-weight: 200;
+          }
+          .tool {
+            display: flex;
+            align-items: center;
+            i {
+              font-size: 24px;
+              font-weight: 100;
+              margin-left: 20px;
+              cursor: pointer;
+              transition: all 0.4s;
+              .active {
+                color: #fa2800;
+              } 
+            }
+            span {
+              font-size: 12px;
+              margin-top: 2px;
+              color: #666;
+              font-weight: 200;
+              position: relative;
+              &after {
+                /* 一根竖着的分隔线 */
+                content: "";
+                width: 1px;
+                height: 13px;
+                background: #4a4a4a;
+                opacity: 0.7;
+                position: absolute;
+                top: 2px;
+                right: -12px;
+              }
+            }
+          }
+        }
+        span {
+          color: #4a4a4a;
+        }
+        .content {
+          width: 100%;
+          font-size: 12px;
+          color: #4a4a4a;
+          line-height: 1.6;
+          padding: 8px 10px;
+          background: #f5f5f5;
+          margin-top: 5px;
+          border-radius: 3px;
+          .beReqlied {
+            margin-top: 10px;
+            background: #ffffff;
+            padding: 8px 10px;
+            border-radius: 3px;
+            color: #666666;
+            small {
+              color: #fa2800;
+            }
+          }
+        }
+      }
+    }
   }
   .zan {
     font-size: small !important;

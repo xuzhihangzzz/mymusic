@@ -28,7 +28,7 @@
     }
   }
 </script>
-<style>
+<style lang="less">
   .link-active, .link-exact-active {
     color: red !important;
   }

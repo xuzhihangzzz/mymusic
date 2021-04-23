@@ -379,7 +379,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   @import "http://at.alicdn.com/t/font_2286501_7kv112w97p4.css";
   .fade-enter {
     opacity: 0;
@@ -409,6 +409,11 @@
     box-shadow: 0 5px 40px -1px rgba(2,10,18,.1);
     display: flex;
     align-items: center;
+    .progress-wrap {
+      p {
+        font-size: 14px;
+      }
+    }
   }
   .avatar {
     width: 60px;
@@ -416,27 +421,27 @@
     border-radius: 5px;
     margin-right: 30px;
     flex-shrink: 0;
-  }
-  .avatar img {
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    max-width: 100%;
-    border-style: none;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+      max-width: 100%;
+      border-style: none;
+    }
   }
   .info {
     margin-right: 15px;
     flex-shrink: 0;
     width: 120px;
-  }
-  .info h2 {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  .info p {
-    font-size: 12px;
-    color: #999;
+    h2 {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 12px;
+      color: #999;
+    }
   }
   .ellipsis {
     overflow: hidden;
@@ -465,33 +470,30 @@
     margin-left: 80px;
     flex: 1;
   }
-  .play-bar .progress-wrap p {
-    font-size: 14px;
-  }
   .bar-inner {
     position: absolute;
     top: -18px;
     left: 0;
     display: flex;
     align-items: center;
-  }
-  .bar-inner .progress {
-    width: 0;
-    background: #fa2800;
-    height: 3px;
-    border-radius: 2px;
-  }
-  .bar-inner .progress-btn {
-    position: absolute;
-    z-index: 100;
-    right: -12px;
-    width: 12px;
-    height: 12px;
-    top: -4.5px;
-    background: #fa2800;
-    box-shadow: 0 0 15px 0 rgba(0,0,0,.15);
-    transition: all .3s;
-    border-radius: 50%;
+    .progress {
+      width: 0;
+      background: #fa2800;
+      height: 3px;
+      border-radius: 2px;
+    }
+    .progress-btn {
+      position: absolute;
+      z-index: 100;
+      right: -12px;
+      width: 12px;
+      height: 12px;
+      top: -4.5px;
+      background: #fa2800;
+      box-shadow: 0 0 15px 0 rgba(0,0,0,.15);
+      transition: all .3s;
+      border-radius: 50%;
+    }
   }
   .volume-wrap {
     width: 180px;
@@ -499,20 +501,20 @@
     display: flex;
     align-items: center;
     margin-right: 80px;
+    .progress-bar {
+      position: relative;
+      width: 100%;
+      flex: 1;
+      height: 2px;
+      background: rgba(0,0,0,.05);
+      border-radius: 2px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
   }
   .iconvolumemedium {
     font-size: 24px;
     cursor: pointer;
-  }
-  .volume-wrap .progress-bar {
-    position: relative;
-    width: 100%;
-    flex: 1;
-    height: 2px;
-    background: rgba(0,0,0,.05);
-    border-radius: 2px;
-    cursor: pointer;
-    margin-left: 10px;
   }
   .iconci {
     font-size: 26px;
@@ -525,7 +527,12 @@
     vertical-align: top;
     width: 100%;
     height: 430px;
-    overflow: hidden
+    overflow: hidden;
+    .lyric-wrapper {
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
   }
   .lyric-box {
     width: 360px;
@@ -535,32 +542,27 @@
     bottom: 80px;
     border-radius: 3px;
     padding: 30px;
-    overflow: hidden
-  }
-  .lyric-box .title {
-    margin: 10px 0 30px;
-    font-weight: 500;
-    font-size: 16px;
-  }
-  .lyric-box .title i {
-    font-size: 20px;
-    cursor: pointer;
-  }
-  .lyric-box .title i:hover {
-    color: #fa2800;
-  }
-  .lyric .lyric-wrapper {
-    width: 100%;
-    margin: 0 auto;
     overflow: hidden;
+    .title {
+      margin: 10px 0 30px;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    i {
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+        color: #fa2800;
+      }
+    }
   }
   .lyric-text {
     margin: 5px 0;
     line-height: 24px;
     font-size: 14px;
     font-weight: 300;
-  }
-  .lyric-text .active {
-    color: #fa2800;
+    .active {
+      color: #fa2800;
+    }
   }
 </style>

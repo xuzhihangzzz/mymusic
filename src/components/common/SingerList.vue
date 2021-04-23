@@ -39,7 +39,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   li, ol, ul {
     list-style: none;
   }
@@ -78,10 +78,10 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-  }
-  .img-class img {
-    width: 100%;
-    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .name {
     text-align: center;

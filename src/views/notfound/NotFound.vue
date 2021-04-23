@@ -8,14 +8,14 @@
     name: 'NotFound'
   }
 </script>
-<style scoped>
+<style lang="less" scoped>
   .error-wrap {
     width: 100%;
     min-height: calc(100vh - 252px);
     padding-top: 70px;
     min-width: 1024px;
-  }
-  .error-wrap img {
-    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 </style>

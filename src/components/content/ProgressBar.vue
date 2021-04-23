@@ -98,7 +98,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .progress-bar-wrap {
   width: 100%;
   height: 100%;
@@ -139,20 +139,20 @@ export default {
   box-shadow: 0 0 15px 0 rgba(0,0,0,.15);
   transition: all 0.3s;
   border-radius: 50%;
-}
-.progress-btn:after {
-  position: absolute;
-  content: " ";
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  border-radius: 50%;
-}
-.progress-btn:hover {
-  transform: scale(1.2);
+  &:after {
+    position: absolute;
+    content: " ";
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 </style>

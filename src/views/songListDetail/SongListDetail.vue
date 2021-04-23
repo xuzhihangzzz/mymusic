@@ -353,7 +353,7 @@
     }
   }
 </script>
-<style scoped>
+<style lang="less" scoped>
   @import "http://at.alicdn.com/t/font_2286501_7kv112w97p4.css";
   ol, ul, li {
     list-style-type:none;
@@ -381,64 +381,230 @@
     margin-top: 20px;
     display: flex;
     align-items: flex-start;
+    .left {
+      flex: 1;
+      width: 950px;
+      padding: 15px;
+      border-radius: 8px;
+      margin-right: 20px;
+      .top {
+        display: flex;
+        .avatar {
+          width: 200px;
+          height: 200px;
+          border-radius: 8px;
+          position: relative;
+          margin-right: 30px;
+          flex-shrink: 0;
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            position: relative;
+          }
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .user {
+            .avatar {
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              position: relative;
+              margin-right: 15px;
+              cursor: pointer;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                position: relative;
+              }
+            }
+          }
+          .tag {
+            a {
+              color: #fff;
+              background: #fa2800;
+              margin-right: 15px;
+              font-size: 12px;
+              cursor: pointer;
+              padding: 4px 12px;
+              border-radius: 15px;
+            }
+          }
+          .desc {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+            margin-top: 15px;
+            p {
+              line-height: 1.6;
+              font-weight: 400;
+              flex: 1;
+              font-size: 14px;
+            }
+            span {
+              flex-shrink: 0;
+              color: #fa2800;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      .content {
+        margin-top: 20px;
+      }
+    }
+    .right {
+      width: 350px;
+      flex-shrink: 0;
+      .module {
+        padding: 15px;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      .card-header {
+        border-left: 3px solid #fa2800;
+        height: 20px;
+        padding-left: 1rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+      .like {
+        padding-bottom: 5px;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 -5px;
+          li {
+            flex: 0 0 14.285714285714%;
+            max-width: 14.285714285714%;
+            padding: 0 5px 10px;
+            .avatar {
+              width: 100%;
+              border-radius: 3px;
+              img {
+                width: 100%;
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+      }
+      .related {
+        padding-bottom: 5px;
+        ul {
+          li {
+            display: flex;
+            margin-bottom: 15px;
+            cursor: pointer;
+            .avatar {
+              width: 50px;
+              height: 50px;
+              border-radius: 3px;
+              margin-right: 15px;
+              flex-shrink: 0;
+              img {
+                width: 100%;
+                border-radius: 3px;
+              }
+            }
+            .info {
+              height: 50px;
+              width: calc(100% - 60px);
+              flex: 1;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              h2 {
+                font-size: 14px;
+                margin-bottom: 10px;
+                width: 100%;
+              }
+              span {
+                font-size: 12px;
+                color: #a5a5c1;
+              }
+            }
+          }
+        }
+      }
+      .comment {
+        ul {
+          li {
+            padding: 10px 0;
+            width: 100%;
+            display: flex;
+            .avatar {
+              width: 45px;
+              height: 45px;
+              border-radius: 50%;
+              margin-right: 12px;
+              flex-shrink: 0;
+              cursor: pointer;
+              img {
+                width: 100%;
+                border-radius: 50%;
+              }
+            }
+            .info {
+              flex: 1;
+              h2 {
+                font-size: 15px;
+                margin-right: 5px;
+                margin-bottom: 10px;
+                cursor: pointer;
+                small {
+                  font-size: 12px;
+                  color: #a5a5c1;
+                  font-weight: 200;
+                }
+              }
+              p {
+                width: 100%;
+                font-size: 12px;
+                color: #666666;
+                line-height: 1.6;
+                padding: 5px 10px;
+                background: #f5f5f5;
+                margin-top: 5px;
+                border-radius: 3px;
+              }
+            }
+          }
+        }
+      }
+      .card-header {
+        border-left: 3px solid #fa2800;
+        height: 20px;
+        padding-left: 1rem;
+        margin-bottom: 15px;
+        font-weight: bold;
+        .icon-like {
+          font-size: 20px;
+        }
+      }
+    }
   }
-  .playlist-detail .left {
-    flex: 1;
-    width: 950px;
-    padding: 15px;
-    border-radius: 8px;
-    margin-right: 20px;
-  }
-  .playlist-detail .left .top {
-    display: flex;
-  }
-  .playlist-detail .left .top .avatar {
-    width: 200px;
-    height: 200px;
-    border-radius: 8px;
-    position: relative;
-    margin-right: 30px;
-    flex-shrink: 0;
-  }
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    position: relative;
-  }
-  .playlist-detail .left .top .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .info .title {
-    width: 100%;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    justify-content: space-between;
-  }
-  .info .user {
-    margin-bottom: 15px;
-  }
-  .playlist-detail .left .top .info .user .avatar {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    position: relative;
-    margin-right: 15px;
-    cursor: pointer;
-  }
-  .playlist-detail .left .top .info .user .avatar img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
+  .info {
+    .title {
+      width: 100%;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      justify-content: space-between;
+    }
+    .user {
+      margin-bottom: 15px;
+    }
   }
   .nickname {
     font-size: 14px;
@@ -456,27 +622,6 @@
     display: flex;
     align-items: center;
   }
-  .playlist-detail .left .top .info .tag a {
-    color: #fff;
-    background: #fa2800;
-    margin-right: 15px;
-    font-size: 12px;
-    cursor: pointer;
-    padding: 4px 12px;
-    border-radius: 15px;
-  }
-  .playlist-detail .left .top .info .desc {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.6;
-    margin-top: 15px;
-  }
-  .playlist-detail .left .top .info .desc p {
-    line-height: 1.6;
-    font-weight: 400;
-    flex: 1;
-    font-size: 14px;
-  }
   .ellipsis-two {
     /* 只显示两行 */
     display: -webkit-box;
@@ -485,140 +630,5 @@
     overflow: hidden;
     font-weight: 700;
     line-height: 18px;
-  }
-  .playlist-detail .left .top .info .desc span {
-    flex-shrink: 0;
-    color: #fa2800;
-    cursor: pointer;
-  }
-  .playlist-detail .left .content {
-    margin-top: 20px;
-  }
-  .playlist-detail .right {
-    width: 350px;
-    flex-shrink: 0;
-  }
-  .playlist-detail .right .like {
-    padding-bottom: 5px;
-  }
-  .playlist-detail .right .module {
-    padding: 15px;
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  .playlist-detail .right .card-header {
-    border-left: 3px solid #fa2800;
-    height: 20px;
-    padding-left: 1rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-  }
-  .playlist-detail .right .like ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -5px;
-  }
-  .playlist-detail .right .like ul li {
-    flex: 0 0 14.285714285714%;
-    max-width: 14.285714285714%;
-    padding: 0 5px 10px;
-  }
-  .playlist-detail .right .like ul li .avatar, .playlist-detail .right .like ul li .avatar img {
-    width: 100%;
-    border-radius: 3px;
-  }
-  .playlist-detail .right .related {
-    padding-bottom: 5px;
-  }
-  .playlist-detail .right .related ul li {
-    display: flex;
-    margin-bottom: 15px;
-    cursor: pointer;
-  }
-  .playlist-detail .right .related ul li .avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 3px;
-    margin-right: 15px;
-    flex-shrink: 0;
-  }
-  .playlist-detail .right .related ul li .avatar img {
-    width: 100%;
-    border-radius: 3px;
-  }
-  .playlist-detail .right .related ul li .info {
-    height: 50px;
-    width: calc(100% - 60px);
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .playlist-detail .right .related ul li .info h2 {
-    font-size: 14px;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  .playlist-detail .right .related ul li .info span {
-    font-size: 12px;
-    color: #a5a5c1;
-  }
-  .playlist-detail .right .module {
-    padding: 15px;
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  .playlist-detail .right .comment ul li {
-    padding: 10px 0;
-    width: 100%;
-    display: flex;
-  }
-  .playlist-detail .right .comment ul li .avatar {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 12px;
-    flex-shrink: 0;
-    cursor: pointer;
-  }
-  .playlist-detail .right .comment ul li .avatar img {
-    width: 100%;
-    border-radius: 50%;
-  }
-  .playlist-detail .right .comment ul li .info {
-    flex: 1;
-  }
-  .playlist-detail .right .comment ul li .info h2 {
-    font-size: 15px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  .playlist-detail .right .comment ul li .info h2 small {
-    font-size: 12px;
-    color: #a5a5c1;
-    font-weight: 200;
-  }
-  .playlist-detail .right .comment ul li .info p {
-    width: 100%;
-    font-size: 12px;
-    color: #666666;
-    line-height: 1.6;
-    padding: 5px 10px;
-    background: #f5f5f5;
-    margin-top: 5px;
-    border-radius: 3px;
-  }
-  .playlist-detail .right .card-header {
-    border-left: 3px solid #fa2800;
-    height: 20px;
-    padding-left: 1rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-  .playlist-detail .right .card-header .icon-like {
-    font-size: 20px;
   }
 </style>

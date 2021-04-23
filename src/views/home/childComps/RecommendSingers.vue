@@ -23,7 +23,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .recommend-singers {
     margin-top: 18px
   }

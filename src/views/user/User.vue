@@ -94,7 +94,7 @@
     }
   }
 </script>
-<style lang="css" scoped>
+<style lang="less" scoped>
   .rank {
     width: 100%;
     min-height: calc(100vh - 252px);

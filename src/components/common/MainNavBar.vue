@@ -67,24 +67,32 @@ import { constants } from 'fs'
   }
 </script>
 
-<style scoped>
-  .main-nav-bar .home-nav .logo a {
-    width: 100%;
-    display: block;
-    height: 70px;
-    background-position: 0;
-    background-repeat: no-repeat;
-    background-size: 150px 40px;
-    background-image: url(~assets/img/home_logo.png);
+<style lang="less" scoped>
+  .main-nav-bar {
+    .home-nav {
+      .logo {
+        a {
+          width: 100%;
+          display: block;
+          height: 70px;
+          background-position: 0;
+          background-repeat: no-repeat;
+          background-size: 150px 40px;
+          background-image: url(~assets/img/home_logo.png);
+        }
+      }
+    }
   }
   .right {
     align-items: center;
     display: flex;
     justify-content: flex-end;
   }
-  .right .right-item {
-    height: 40px;
-    margin-left: 10px;
+  .right {
+    .right-item {
+      height: 40px;
+      margin-left: 10px;
+    }
   }
   .center {
     /* center作为flex容器，让里面的项目使用flex布局 */
@@ -93,9 +101,11 @@ import { constants } from 'fs'
     width: 100%;
     margin-left: 15px;
   }
-  .center a {
-    color: black;
-    margin-left: 15px;
-    margin-right: 15px;
+  .center {
+    a {
+      color: black;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
   }
 </style>

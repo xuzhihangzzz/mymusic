@@ -89,58 +89,60 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .all-list {
     margin-top: 20px;
-  }
-  .list-container h2 {
-    font-size: 14px;
-    font-weight: 550;
-    margin: 0 !important;
   }
   .list-container {
     display: flex;
     flex-wrap: wrap;
-  }
-  .list-container .list-item {
-    flex: 0 0 12.5%;
-    max-width: 12.5%;
-    padding: 0 15px 30px 15px;
-    cursor: pointer;
-  }
-  .list-container .list-item .imgText img {
-    max-width: 100%;
-    border-radius: 3px;
-    box-shadow: 0 5px 40px -1px rgba(2,10,18,.1);
+    h2 {
+      font-size: 14px;
+      font-weight: 550;
+      margin: 0 !important;
+    }
+    .list-item {
+      flex: 0 0 12.5%;
+      max-width: 12.5%;
+      padding: 0 15px 30px 15px;
+      cursor: pointer;
+      .imgText {
+        img {
+          max-width: 100%;
+          border-radius: 3px;
+          box-shadow: 0 5px 40px -1px rgba(2,10,18,.1);
+        }
+      }
+      .count {
+        position: absolute;
+        right: 10px;
+        top: 1px;
+        height: 24px;
+        padding-left: 9px;
+        background: url(https://img.alicdn.com/tfs/TB1xEGRub9YBuNjy0FgXXcxcXXa-268-48.png) no-repeat 0;
+        background-size: cover;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 530;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 4px 0 4px 6px;
+          border-color: transparent transparent transparent #fff;
+          margin-right: 5px;
+        }
+      }
+    }
   }
   .imgText {
     /* 子绝父相 */
     position: relative;
-  }
-  .list-container .list-item .count {
-    position: absolute;
-    right: 10px;
-    top: 1px;
-    height: 24px;
-    padding-left: 9px;
-    background: url(https://img.alicdn.com/tfs/TB1xEGRub9YBuNjy0FgXXcxcXXa-268-48.png) no-repeat 0;
-    background-size: cover;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 530;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .list-container .list-item .count .icon {
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 4px 0 4px 6px;
-    border-color: transparent transparent transparent #fff;
-    margin-right: 5px;
   }
   .name {
     margin-top: 15px;
