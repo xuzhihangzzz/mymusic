@@ -64,7 +64,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .home-swiper {
     width: 1324px;
     height: 200px;

@@ -3,15 +3,6 @@
     <div class="title flex-center">
       <el-dropdown trigger="click">
         <span class="el-dropdown-link">全部歌单</span>
-        <!-- <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item 
-            v-for="(item, index) in categoryList" 
-            :key="index"
-            @click.native="categoryItemClick(item.name)"
-          >
-            {{item.name}}
-          </el-dropdown-item>
-        </el-dropdown-menu> -->
       </el-dropdown>
     </div>
     <div class="hot-tag flex-row">
@@ -61,7 +52,7 @@
     }
   }
 </script>
-<style scoped>
+<style lang="less" scoped>
   h1, h2, h3, h4, h5, h6, hr, html, input, li, ol, p, pre, td, textarea, th, ul {
     margin: 0;
     padding: 0;
@@ -113,10 +104,14 @@
     align-items: center;
     justify-content: center;
   }
-  .hot-tag ul li {
-    margin: 0 5px;
-    padding-right: 10px;
-    cursor: pointer;
+  .hot-tag {
+    ul {
+      li {
+        margin: 0 5px;
+        padding-right: 10px;
+        cursor: pointer;
+      }
+    }
   }
   .flex-row {
     display: flex;

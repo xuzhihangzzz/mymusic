@@ -51,7 +51,7 @@
     name: 'Footer'
   }
 </script>
-<style scoped>
+<style lang="less" scoped>
   p, a {
     color: rgba(255,255,255,.5);
     font-size: 14px;
@@ -90,8 +90,10 @@
     margin-right: auto;
     margin-left: auto;
   }
-  .connection p {
-    height: 25px;
+  .connection {
+    p {
+      height: 25px;
+    }
   }
   .img {
     border-radius: .3125em;
@@ -120,10 +122,11 @@
     flex-basis: 43.75%;
   }
 
-  .info-item .item-one {
-    padding-left: 40px;
+  .info-item {
+    .item-one {
+      padding-left: 40px;
+    }
   }
-
   .divide {
     height: 1px;
     border-bottom: 1px solid rgba(255,255,255,.1);

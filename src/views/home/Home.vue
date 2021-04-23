@@ -87,7 +87,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   #home {
     width: 100%;
     min-height: calc(100vh - 252px);

@@ -153,7 +153,7 @@
     }
   }
 </script>
-<style lang="css" scoped>
+<style lang="less" scoped>
   .active {
     color: red !important;
   }
@@ -167,13 +167,13 @@
     background-attachment: fixed;
 
     position: relative;
-  }
-  .search-box .search-input {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 720px;
+    .search-input {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 720px;
+    }
   }
   .search {
     max-width: 1380px;
@@ -182,26 +182,28 @@
     margin-top: 43px;
     padding-right: 15px;
     padding-left: 15px;
-  }
-  .search .header {
-    display: flex;
-    align-items: center;
-  }
-  .search .header .nav a {
-    cursor: pointer;
-    height: 20px;
-    font-size: 15px;
-    line-height: 20px;
-    margin-right: 34px;
-    font-weight: 300;
-    color: #333;
-    text-align: center;
-  }
-  .search .word {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 30px;
-    margin-right: 40px;
-    color: #4a4a4a
+    .header {
+      display: flex;
+      align-items: center;
+      .nav {
+        a {
+          cursor: pointer;
+          height: 20px;
+          font-size: 15px;
+          line-height: 20px;
+          margin-right: 34px;
+          font-weight: 300;
+          color: #333;
+          text-align: center;
+        }
+      }
+    }
+    .word {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 30px;
+      margin-right: 40px;
+      color: #4a4a4a
+    }
   }
 </style>

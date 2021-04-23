@@ -125,7 +125,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .login-box {
     overflow: hidden;
     height: 486px;
@@ -143,27 +143,27 @@
     transition-property: transform;
     transition-duration: .3s;
     z-index: 80;
+    .img {
+      width: 55px;
+      margin-top: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      img {
+        width: 55px;
+        height: 55px;
+        border-radius: 5px;
+      }
+    }
+    p {
+      margin-bottom: 45px;
+    }
+    .form-item {
+      margin-bottom: 22px;
+    }
   }
   .login-form {
     width: 296px;
     margin: 0 auto;
-  }
-  .login-box .img {
-    width: 55px;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .login-box .img img {
-    width: 55px;
-    height: 55px;
-    border-radius: 5px;
-  }
-  .login-box p {
-    margin-bottom: 45px;
-  }
-  .login-box .form-item {
-    margin-bottom: 22px;
   }
   .login-btn button {
     width: 296px;

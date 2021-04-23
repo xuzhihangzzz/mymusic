@@ -155,9 +155,9 @@ export default {
   mounted() {}
 }
 </script>
-<style scoped>
+<style lang="less" scoped>
   @import "http://at.alicdn.com/t/font_2286501_7kv112w97p4.css";
-  .artist-box >>> tbody img {
+  .artist-box /deep/ tbody img {
     border-radius: 5px;
   }
   .ellipsis {
@@ -168,197 +168,208 @@ export default {
   .artist-box {
     width: 950px;
     width: 100%;
-  }
-  .artist-box .tool-head {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 15px 0;
-  }
-  .artist-box .tool-head .item {
-    background: #f2f2f2;
-    color: #333333;
-    padding: 7px 15px;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-left: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s;
-  }
-  .artist-box .tool-head .item i {
-    margin-right: 5px;
-  }
-  .artist-box .tool-head .item .nicefenxiang1 {
-    font-size: 18px;
-  }
-  .artist-box .tool-head .item .active {
-    background: #fa2800;
-    color: #fff;
-  }
-  .artist-box .tool-head .play-item {
-    background: #fa2800;
-    color: #fff;
-  }
-  .artist-box .artist-table thead {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    background: #fafafa;
-    color: #999;
-  }
-  .artist-box .artist-table thead th {
-    padding: 0 9px;
-    text-align: left;
-    font-weight: 300;
-    white-space: nowrap;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-  }
-  .artist-box .artist-table thead th .th-index {
-    width: 10%;
-    text-align: center;
-  }
-  .artist-box .artist-table thead th .th-name {
-    width: 40%;
-  }
-  .artist-box .artist-table thead th .th-artist {
-    width: 25%;
-  }
-  .artist-box .artist-table thead th .th-album {
-    width: 15%;
-  }
-  .artist-box .artist-table thead th .th-duration {
-    width: 15%;
-    text-align: right;
-    padding-right: 40px;
-  }
-  .artist-box .artist-table {
-    width: 100%;
-  }
-  .artist-box .artist-table tbody {
-    width: 100%;
-  }
-  .artist-box .artist-table tbody tr {
-    height: 50px;
-    /* line-height: 50px; */
-    transition: background-color .2s linear;
-  }
-  .artist-box .artist-table tbody tr td {
-    padding: 0 9px;
-    /* white-space: nowrap; */
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-  }
-  .artist-box .artist-table tbody tr .index-container .num {
-    color: #4a4a4a;
-    font-weight: 500;
-  }
-  .artist-box .artist-table tbody tr .index-container .play-icon {
-    display: none;
-    height: 16px;
-    min-width: 18px;
-    overflow: hidden;
-  }
-  .artist-box .artist-table tbody tr .index-container .play-icon .line {
-    width: 2px;
-    height: 100%;
-    margin-left: 2px;
-    background-color: #ff410f;
-    animation: play .9s linear infinite alternate;
-  }
-  .artist-box .artist-table tbody tr .index-container .play-btn {
-    color: #fa2800;
-    font-size: 28px;
-    display: none;
-    text-align: left;
-    cursor: pointer;
-  }
-  .artist-box .artist-table tbody tr .index-container .pause-btn {
-    color: #fa2800;
-    font-size: 30px;
-    display: none;
-    text-align: left;
-    cursor: pointer;
-  }
-  .artist-box .artist-table tbody tr .name-container {
-    display: flex;
-    align-items: center;
-  }
-  .artist-box .artist-table tbody tr .name-container .avatar {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    flex-shrink: 0;
-    margin-right: 10px;
-  }
-  .artist-box .artist-table tbody tr .name-container .avatar img {
-    width: 100%;
-    border-radius: 5px;
-  }
-  .artist-box .artist-table tbody tr .duration-container {
-    text-align: right;
-    padding-right: 15px;
-    position: relative;
-  }
-  .artist-box .artist-table tbody tr .duration-container p {
-    padding-right: 10px;
-  }
-  .artist-box .artist-table tbody tr .duration-container .song-tools {
-    display: flex;
-    justify-content: flex-end;
-    top: 50%;
-    margin-top: -25px;
-    right: 10px;
-    position: absolute;
-    display: none;
-  }
-  .artist-box .artist-table tbody tr .duration-container .song-tools i {
-    flex-shrink: 0;
-    cursor: pointer;
-    margin-right: 15px;
-    font-size: 20px;
-  }
-  /* 隔一行颜色一样 */
-  .artist-box .artist-table tbody tr:nth-child(2n) {
-    background: #f7f7f7;
-  }
-  .artist-box .artist-table tbody tr .playing p {
-    color: #fa2800;
-  }
-  .artist-box .artist-table tbody tr .playing i {
-    color: #fa2800;
-  }
-  .artist-box .artist-table tbody tr .playing .index-container .num {
-    display: none;
-  }
-  .artist-box .artist-table tbody tr .playing .index-container .play-icon {
-    display: flex;
-  }
-  .artist-box .artist-table tbody tr .playing .index-container .play-btn {
-    display: none;
-  }
-  .artist-box .artist-table tbody tr:hover {
-    /* CSS伪类，鼠标悬停，变色 */
-    background: #e8e9ed;
-  }
-  .artist-box .artist-table tbody tr:hover playing .index-container .play-btn {
-    display: none;
-  }
-  .artist-box .artist-table tbody tr:hover playing .index-container .play-icon {
-    display: none;
-  }
-  .artist-box .artist-table tbody tr:hover playing .index-container .pause-btn {
-    display: block;
-  }
-  .artist-box .artist-table tbody tr:hover .index-container .num {
-    display: none;
-  }
-  .artist-box .artist-table tbody tr:hover .index-container .play-btn {
-    display: block;
+    .tool-head {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 15px 0;
+      .item {
+        background: #f2f2f2;
+        color: #333333;
+        padding: 7px 15px;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s;
+        i {
+          margin-right: 5px;
+        }
+        .nicefenxiang1 {
+          font-size: 18px;
+        }
+        .active {
+          background: #fa2800;
+          color: #fff;
+        }
+      }
+      .play-item {
+        background: #fa2800;
+        color: #fff;
+      }
+    }
+    .artist-table {
+      width: 100%;
+      thead {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: #fafafa;
+        color: #999;
+        th {
+          padding: 0 9px;
+          text-align: left;
+          font-weight: 300;
+          white-space: nowrap;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          .th-index {
+            width: 10%;
+            text-align: center;
+          }
+          .th-name {
+            width: 40%;
+          }
+          .th-artist {
+            width: 25%;
+          }
+          .th-album {
+            width: 15%;
+          }
+          .th-duration {
+            width: 15%;
+            text-align: right;
+            padding-right: 40px;
+          }
+        }
+      }
+      tbody {
+        width: 100%;
+        tr {
+          &:nth-child(2n) {
+            background: #f7f7f7;
+          }
+          &:hover {
+            /* CSS伪类，鼠标悬停，变色 */
+            background: #e8e9ed;
+            .playing {
+              .index-container {
+                .play-btn {
+                  display: none;
+                }
+                .play-icon {
+                  display: none;
+                }
+                .pause-btn {
+                  display: block;
+                }
+              }
+            }
+            .index-container {
+              .num {
+                display: none;
+              }
+              .play-btn {
+                display: block;
+              }
+            }
+          }
+          height: 50px;
+          /* line-height: 50px; */
+          transition: background-color .2s linear;
+          td {
+            padding: 0 9px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+          }
+          .index-container {
+            .num {
+              color: #4a4a4a;
+              font-weight: 500;
+            }
+            .play-icon {
+              display: none;
+              height: 16px;
+              min-width: 18px;
+              overflow: hidden;
+              .line {
+                width: 2px;
+                height: 100%;
+                margin-left: 2px;
+                background-color: #ff410f;
+                animation: play .9s linear infinite alternate;
+              }
+            }
+            .play-btn {
+              color: #fa2800;
+              font-size: 28px;
+              display: none;
+              text-align: left;
+              cursor: pointer;
+            }
+            .pause-btn {
+              color: #fa2800;
+              font-size: 30px;
+              display: none;
+              text-align: left;
+              cursor: pointer;
+            }
+          }
+          .name-container {
+            display: flex;
+            align-items: center;
+            .avatar {
+              width: 35px;
+              height: 35px;
+              border-radius: 5px;
+              flex-shrink: 0;
+              margin-right: 10px;
+              img {
+                width: 100%;
+                border-radius: 5px;
+              }
+            }
+          }
+          .duration-container {
+            text-align: right;
+            padding-right: 15px;
+            position: relative;
+            p {
+              padding-right: 10px;
+            }
+            .song-tools {
+              display: flex;
+              justify-content: flex-end;
+              top: 50%;
+              margin-top: -25px;
+              right: 10px;
+              position: absolute;
+              display: none;
+              i {
+                flex-shrink: 0;
+                cursor: pointer;
+                margin-right: 15px;
+                font-size: 20px;
+              }
+            }
+          }
+          .playing {
+            p {
+              color: #fa2800;
+            }
+            i {
+              color: #fa2800;
+            }
+            .index-container {
+              .num {
+                display: none;
+              }
+              .play-icon {
+                display: flex;
+              }
+              .play-btn {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .artist-box .artist-table tbody p {
     cursor: pointer;

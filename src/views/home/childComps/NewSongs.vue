@@ -68,7 +68,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .new-songs {
     margin-top: 2px;
   }
@@ -88,63 +88,67 @@
     display: flex;
     /* 换行 */
     flex-wrap: wrap;
-  }
-  .new-songs-container .songs-item {
-    flex: 0 0 50%;
-    max-width: 50%;
+    .songs-item {
+      flex: 0 0 50%;
+      max-width: 50%;
 
-    margin-bottom: 20px;
-    height: 80px;
-    padding: 0 15px 30px;
+      margin-bottom: 20px;
+      height: 80px;
+      padding: 0 15px 30px;
+      .complete-item {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        height: 80px;
+        background-color: #fff;
+        /* flex元素从主轴首开始排列，没有间距 */
+        justify-content: flex-start;
+        padding: 0 4%;
+        border-radius: 5px;
+        position: relative;
+
+        background-color: #fff;
+        box-shadow: 0 5px 40px -1px rgba(2,10,18,.1);
+        .img {
+          img {
+            width: 55px;
+            height: 55px;
+            border-radius: 5px;
+            /* position: relative; */
+            margin-right: 30px;
+          }
+        }
+        .info {
+          width: 15%;
+          .author {
+            span {
+              font-size: 14px;
+            }
+          }
+          .song-name {
+            font-size: 14px;
+            color: #333;
+            font-weight: 700;
+            margin-top: 0 !important;
+            margin-bottom: 10px !important;
+          }
+        }
+      }
+    }
   }
   .front-icon {
     width: 30px;
     margin-right: 12px;
   }
-  .new-songs-container .songs-item .complete-item {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    height: 80px;
-    background-color: #fff;
-    /* flex元素从主轴首开始排列，没有间距 */
-    justify-content: flex-start;
-    padding: 0 4%;
-    border-radius: 5px;
-    position: relative;
-
-    background-color: #fff;
-    box-shadow: 0 5px 40px -1px rgba(2,10,18,.1);
-  }
-  .new-songs-container .songs-item .complete-item .img img {
-    width: 55px;
-    height: 55px;
-    border-radius: 5px;
-    /* position: relative; */
-    margin-right: 30px;
-  }
-  .new-songs-container .songs-item .complete-item .info {
-    width: 15%;
-  }
   .author {
     margin: 0 !important;
-  }
-  .new-songs-container .songs-item .complete-item .info .author span {
-    font-size: 14px;
   }
   .ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     /* 不换行 */
     white-space: nowrap;
-  }
-  .new-songs-container .songs-item .complete-item .info .song-name {
-    font-size: 14px;
-    color: #333;
-    font-weight: 700;
-    margin-top: 0 !important;
-    margin-bottom: 10px !important;
   }
   .album {
     flex: 1;

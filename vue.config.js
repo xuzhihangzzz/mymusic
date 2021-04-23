@@ -1,3 +1,7 @@
+const path = require('path')
+function resolve (dir) {
+  return path.join(__dirname, dir)
+}
 // 该配置会和公共配置合并
 module.exports = {
 
@@ -37,6 +41,12 @@ module.exports = {
         'model': '@/model',
         'utils': '@/utils'
       }
+    }
+  },
+  pluginOptions: { // 第三方插件配置
+    'style-resources-loader': {
+      preProcessor: 'less',
+      patterns: [path.resolve(__dirname, './src/assets/css/variable.less')]
     }
   }
 }

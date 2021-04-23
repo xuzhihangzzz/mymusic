@@ -13,7 +13,7 @@
     name: 'NavBar'    
   }
 </script>
-<style scoped>
+<style lang="less" scoped>
   .nav-bar {
     /* 导航栏 */
     background-color: #fff;
@@ -28,19 +28,19 @@
     left: 0;
     right: 0;
     z-index: 10;
-  }
-  .nav-bar .content {
-    /* 导航栏的内容 */
-    max-width: 1380px;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    .content {
+      /* 导航栏的内容 */
+      max-width: 1380px;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
   .left {
     width:180px;

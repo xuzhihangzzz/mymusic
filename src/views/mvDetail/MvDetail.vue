@@ -36,12 +36,6 @@
             ><a>{{ videoDetailInfoCount.commentCount }} 条评论</a>
           </span>
         </div>
-        <!-- <comment-box
-          :currentCommentId="currentCommentId"
-          @commentSubmit="commentSubmit"
-          :clearContent="clearContent"
-          v-if="currentCommentId == ''"
-        /> -->
         <comment-list
           v-if="hotComments.length > 0"
           title="精彩评论"
@@ -61,19 +55,6 @@
           @commentSubmit="commentSubmit"
           @commentLike="commentLike"
         />
-        <div class="page-wrap">
-          <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page="currentPage"
-            :page-size="limit"
-            background
-            hide-on-single-page
-            layout="total, prev, pager, next"
-            :total="commentTotal"
-          >
-          </el-pagination>
-        </div>
       </div>
     </div>
     
@@ -215,25 +196,6 @@
             params.t = 2
             params.commentId = this.currentCommentId
           }
-          // this.$api
-          //   .sendComment(params)
-          //   .then(res => {
-          //     if (res.code === 200) {
-          //       this.$message({
-          //         message: '提交成功',
-          //         type: 'success'
-          //       })
-          //       this.cancelComment()
-          //       this.clearContent = true
-          //       this.getMvComments(this.videoId)
-          //     }
-          //   })
-          //   .catch(err => {
-          //     this.$notify.error({
-          //       title: err.data.dialog.title,
-          //       message: err.data.dialog.subtitle
-          //     })
-          //   })
         }
       },
       // 取消评论
@@ -380,7 +342,7 @@
     }
   }
 </script>
-<style scoped>
+<style lang="less" scoped>
   @import "http://at.alicdn.com/t/font_2286501_7kv112w97p4.css";
   ol, ul, li {
     list-style-type:none;
@@ -408,16 +370,60 @@
     margin-top: 20px;
     display: flex;
     align-items: flex-start;
-  }
-  .mv-detail .left {
-    flex: 1;
-    width: 950px;
-    padding: 15px;
-    border-radius: 8px;
-    margin-right: 20px;
-  }
-  .mv-detail .left .top {
-    display: flex;
+    .left {
+      flex: 1;
+      width: 950px;
+      padding: 15px;
+      border-radius: 8px;
+      margin-right: 20px;
+      .top {
+        display: flex;
+      }
+      .video-content {
+        position: relative;
+        padding-top: 56.25%;
+        video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+        }
+      }
+      .comments {
+        margin-top: 25px;
+        .title {
+          width: 100%;
+          height: 50px;
+          border-radius: 3px;
+          padding: 0 3px;
+          border-bottom: 1px solid #f1f1f1;
+        }
+        span {
+          a {
+            color: #161e27;
+          }
+        }
+      }
+    }
+    .right {
+      width: 350px;
+      flex-shrink: 0;
+      .module {
+        padding: 15px;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+      .card-header {
+        border-left: 3px solid #fa2800;
+        height: 20px;
+        padding-left: 1rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+    }
   }
   .flex-row {
     flex-direction: row;
@@ -426,144 +432,97 @@
     display: flex;
     align-items: center;
   }
-  .mv-detail .left .video-content {
-    position: relative;
-    padding-top: 56.25%;
-  }
-  .mv-detail .left .video-content video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-  }
-  .left .comments {
-    margin-top: 25px;
-  }
-  .left .comments .title {
-    width: 100%;
-    height: 50px;
-    border-radius: 3px;
-    padding: 0 3px;
-    border-bottom: 1px solid #f1f1f1;
-  }
-  .left .comments span a {
-    color: #161e27;
-  }
   .video-foot {
     margin-top: 12px;
+    h2 {
+      font-size: 16px;
+    }
+    .tag {
+      margin-top: 12px;
+      margin-bottom: 12px; 
+      a {
+        font-size: 12px;
+        color: #fa2800;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+    p {
+      span {
+        margin-right: 30px;
+        font-size: 12px;
+        color: #999;
+      }
+    }
   }
-  .video-foot h2 {
-    font-size: 16px;
-  }
-  .video-foot .tag {
-    margin-top: 12px;
-    margin-bottom: 12px; 
-  }
-  .video-foot .tag a {
-    font-size: 12px;
-    color: #fa2800;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  .video-foot p span {
-    margin-right: 30px;
-    font-size: 12px;
-    color: #999;
-  }
-  .mv-detail .right {
-    width: 350px;
-    flex-shrink: 0;
-  }
-  .mv-detail .right .module {
-    padding: 15px;
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  .mv-detail .right .card-header {
-    border-left: 3px solid #fa2800;
-    height: 20px;
-    padding-left: 1rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-  }
-  .mv-detail .right .card-header {
-    border-left: 3px solid #fa2800;
-    height: 20px;
-    padding-left: 1rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-
   .related {
     padding-bottom: 5px;
-  }
-  .related ul li{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
-  }
-  .related ul li .avatar {
-    width: 100%;
-    margin-right: 15px;
-    flex-shrink: 0;
-    position: relative;
-  }
-  .related ul li .avatar img {
-    cursor:pointer;
-    width: 100%;
-  }
-  .related ul li .avatar .action {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
-  .related ul li .avatar .action .play {
-    width: 32px;
-    height: 32px;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    background-color: #fa2800;
-  }
-  .related ul li .avatar .action .play i {
-    font-size: 12px;
-  }
-  .related ul li .info {
-    height: 50px;
-    width: calc(100% - 50px);
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .related ul li .info h2 {
-    font-size: 14px;
-    margin-bottom: 3px;
-    margin-top: 5px;
-    width: 100%;
-    min-height: 20px;
+    ul {
+      li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        .avatar {
+          width: 100%;
+          margin-right: 15px;
+          flex-shrink: 0;
+          position: relative;
+          img {
+            cursor:pointer;
+            width: 100%;
+          }
+          .action {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            .play {
+              width: 32px;
+              height: 32px;
+              padding: 0;
+              border: none;
+              border-radius: 50%;
+              color: #fff;
+              cursor: pointer;
+              background-color: #fa2800;
+              i {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .info {
+          height: 50px;
+          width: calc(100% - 50px);
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          h2 {
+            font-size: 14px;
+            margin-bottom: 3px;
+            margin-top: 5px;
+            width: 100%;
+            min-height: 20px;
+            i {
+              color: #fa2800;
+              font-size: 24px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
   }
   .author {
     font-size: 12px;
     color: #a5a5c1;
+    span {
+      font-size: 12px;
+      color: #a5a5c1;
+    }
   }
-  .author span {
-    font-size: 12px;
-    color: #a5a5c1;
-  }
-  .related ul li .info h2 i {
-    color: #fa2800;
-    font-size: 24px;
-    margin-right: 5px;
-  }
-            
 </style>

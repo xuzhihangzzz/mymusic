@@ -74,7 +74,7 @@
   }
 </script>
 
-<style lang="css" scoped>
+<style lang="less" scoped>
   @import "http://at.alicdn.com/t/font_2286501_7kv112w97p4.css";
   .info-container {
     z-index: 100;
@@ -90,67 +90,67 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0 15px 0 15px;
-  }
-  .card .avatar {
-    width: 98px;
-    height: 98px;
-    flex-shrink: 0;
-    z-index: 2;
-    position: relative;
-  }
-  .card .avatar img {
-    width: 98px;
-    height: 98px;
-    border-radius: 3px;
-  }
-  .profile .info {
-    width: 100%;
-    margin-left: 15px;
-  }
-  .profile .info .name {
-    font-weight: 600;
-    font-size: 16px;
+    .avatar {
+      width: 98px;
+      height: 98px;
+      flex-shrink: 0;
+      z-index: 2;
+      position: relative;
+      img {
+        width: 98px;
+        height: 98px;
+        border-radius: 3px;
+      }
+    }
   }
   .profile {
     padding-left: 33px;
     padding-right: 75px;
     margin-top: 10px;
-  }
-  .profile .tag {
-    position: relative;
-    font-size: 13px;
-    padding-left: 15px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  .profile .tag .sex-icon {
-    font-size: 14px;
-    margin-left: 5px;
-  }
-  .profile .tag .men {
-    color: #4192eb;
-  }
-  .profile .tag .women {
-    color: #f4606c;
-  }
-  .profile .tag .area-icon {
-    font-size: 12px;
-    margin-right: 5px;
-  }
-  .profile .tag span {
-    font-size: 13px;
-  }
-  .profile .tag::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #409eff;
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    margin-top: -3px;
+    .info {
+      width: 100%;
+      margin-left: 15px;
+      .name {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    .tag {
+      position: relative;
+      font-size: 13px;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      .sex-icon {
+        font-size: 14px;
+        margin-left: 5px;
+      }
+      .men {
+        color: #4192eb;
+      }
+      .women {
+        color: #f4606c;
+      }
+      .area-icon {
+        font-size: 12px;
+        margin-right: 5px;
+      }
+      span {
+        font-size: 13px;
+      }
+      :before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #409eff;
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        margin-top: -3px;
+      }
+    }
   }
   .right {
     width: 300px;
@@ -158,14 +158,14 @@
   .follow {
     list-style: none;
     display: flex;
-  }
-  .follow li {
-    text-align: center;
-    font-size: 14px;
-    color: #958ebb;
-    margin-right: 30px;
-  }
-  .follow li span {
-    display: block;
+    li {
+      text-align: center;
+      font-size: 14px;
+      color: #958ebb;
+      margin-right: 30px;
+      span {
+        display: block;
+      }
+    }
   }
 </style>
