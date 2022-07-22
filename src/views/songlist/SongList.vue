@@ -24,7 +24,7 @@
   import SongListNavBar from './childComps/SongListNavBar'
   import ReusableSongList from 'components/common/ReusableSongList'
 
-  import {getSongLists, getHotTags, getListByTag, getCategoryList} from 'network/songlist.js'
+  import {getSongLists, getHotTags, getCategoryList} from 'network/songlist.js'
 
   export default {
     

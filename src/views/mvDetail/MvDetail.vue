@@ -99,7 +99,6 @@
 
 <script>
   import CommentList from 'components/common/CommentList'
-  import { createSong } from 'model/song.js'
   import utils from 'utils/utils.js'
   import {getMvUrl,
           getMvDetail,
