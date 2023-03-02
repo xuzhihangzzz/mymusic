@@ -3,13 +3,11 @@
     <div class="wrapper">
       <ul class="singers-container">
         <li class="singers-item" v-for="(item, index) in moreSingers" :key="index">
-
           <div class="img-parent">
             <div class="img-class">
               <img v-lazy="getUrl(item.img1v1Url)" alt="">
             </div>
           </div>
-        
           <div class="name ellipsis">
             <p>{{item.name}}</p>
           </div>

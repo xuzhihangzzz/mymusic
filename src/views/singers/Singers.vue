@@ -1,20 +1,17 @@
 <template>
   <div class="singers">
     <div class="wrap">
-      <singers-nav-bar></singers-nav-bar>
       <all-singers></all-singers>
     </div>
   </div>
 </template>
 
 <script>
-  import SingersNavBar from './childComps/SingersNavBar'
   import AllSingers from './childComps/AllSingers'
 
   export default {
     name: 'Singers',
     components: {
-      SingersNavBar,
       AllSingers
     },
     mounted() {
